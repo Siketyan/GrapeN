@@ -1,0 +1,51 @@
+﻿<Window x:Class="GrapeN.Windows.AutoActionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrapeN.Windows"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:extk="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Title="自動アクション設定" Height="383" Width="565" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition />
+            <RowDefinition Height="128" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Background="#FF272727">
+            <ComboBox x:Name="Type" Margin="10,5,5,5"
+                      IsEditable="False" MinWidth="95">
+                <ComboBoxItem>いいね</ComboBoxItem>
+                <ComboBoxItem>リツイート</ComboBoxItem>
+                <ComboBoxItem>引用リツイート</ComboBoxItem>
+                <ComboBoxItem>返信</ComboBoxItem>
+            </ComboBox>
+            <CheckBox x:Name="UseRegex" Foreground="White" Margin="0,0,5,0"
+                      VerticalContentAlignment="Center">正規表現</CheckBox>
+            <extk:WatermarkTextBox x:Name="Pattern" Margin="0,5,5,5" Width="100" Watermark="パターン" />
+            <extk:WatermarkTextBox x:Name="Message" Margin="0,5" Width="150" Watermark="メッセージ" />
+
+            <Button Background="Transparent" BorderBrush="Transparent" Click="Add"
+                    Width="32" Height="32" FontSize="20" Padding="0,2,0,0"
+                    FontFamily="../#FontAwesome" Foreground="LightGreen"></Button>
+            <Button Background="Transparent" BorderBrush="Transparent"
+                    Width="32" Height="32" FontSize="20" Click="Remove"
+                    FontFamily="../#FontAwesome" Foreground="Red"></Button>
+        </StackPanel>
+
+        <DataGrid x:Name="Table" Grid.Row="1" HorizontalAlignment="Left" IsReadOnly="True"
+                  AutoGenerateColumns="False" VerticalAlignment="Top" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="アクション" Binding="{Binding TypeString}" />
+                <DataGridCheckBoxColumn Header="正規表現" Binding="{Binding UseRegex}" />
+                <DataGridTextColumn Header="パターン" Binding="{Binding Pattern}" />
+                <DataGridTextColumn Header="メッセージ" Width="*" Binding="{Binding Message}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Image Grid.Row="2" Source="../Resources/Pronama/Illust/autoaction.png" />
+    </Grid>
+</Window>

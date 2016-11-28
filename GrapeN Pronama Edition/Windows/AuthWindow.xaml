@@ -1,0 +1,19 @@
+﻿<Window x:Class="GrapeN.Auth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrapeN"
+        mc:Ignorable="d" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner"
+        Title="認証" Height="250" Width="421">
+    <StackPanel Margin="10">
+        <Label>1. 「認証開始」ボタンをクリックしてブラウザを開いてください。</Label>
+        <Button Height="25" Click="AuthStart">認証開始</Button>
+        
+        <Label Margin="0,10,0,0">2. ブラウザ上で認証し、表示されたPINコードを入力してください。</Label>
+        <TextBox x:Name="Pin" Height="40" FontSize="28" HorizontalContentAlignment="Center"
+                 MaxLength="7" PreviewTextInput="CheckPin" InputMethod.IsInputMethodEnabled="False" />
+        <Label Margin="0,10,0,0">3. 最後に「認証」ボタンをクリックしてください。</Label>
+        <Button Height="25" Click="GetToken">認証</Button>
+    </StackPanel>
+</Window>

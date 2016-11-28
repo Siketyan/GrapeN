@@ -1,0 +1,57 @@
+﻿<Window x:Class="GrapeN.NewTweet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GrapeN"
+        mc:Ignorable="d" ShowInTaskbar="false" WindowStartupLocation="CenterOwner"
+        Title="今どうしてる？" Height="250" Width="570" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Window.Resources>
+        <ControlTemplate TargetType="{x:Type Button}" x:Key="ActionButtonTemplate">
+            <Label Foreground="{TemplateBinding Foreground}"
+                   VerticalContentAlignment="Center" FontSize="20"
+                   Content="{TemplateBinding Content}"
+                   FontFamily="../#FontAwesome" Cursor="Hand"
+                   Width="40" HorizontalContentAlignment="Center" />
+        </ControlTemplate>
+
+        <DataTemplate x:Key="MediaListItemTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="{Binding Icon}" FontFamily="../#FontAwesome" />
+                <Label Content="{Binding Name}" />
+                <Label Content="{Binding UploadStatus}" HorizontalAlignment="Right" />
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Image Source="../Resources/Pronama/Background/6.png" HorizontalAlignment="Right" />
+
+        <StackPanel Margin="15,10">
+            <TextBox x:Name="Text" TextWrapping="Wrap" AcceptsReturn="True" Height="150"
+                     TextChanged="CountText" Background="Transparent" Padding="0,0,200,0" />
+
+            <ListBox x:Name="MediaList" Background="{x:Null}" BorderBrush="#FFEEEEEE"
+                 Padding="0" ItemsSource="{Binding Path=Medias}"
+                 Visibility="Collapsed" Height="100" Margin="0,5,0,0"
+                 ItemTemplate="{DynamicResource MediaListItemTemplate}"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled" />
+
+            <Grid Grid.Row="2" Height="40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Template="{DynamicResource ActionButtonTemplate}" Click="AddImage"></Button>
+                    <Button Template="{DynamicResource ActionButtonTemplate}" Click="AddScreen"></Button>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Label x:Name="Count" Height="40" Content="140" VerticalContentAlignment="Center" Margin="0,0,40,0" />
+                    <Button x:Name="TweetButton" DockPanel.Dock="Right" Margin="5" Width="70" Background="#39F"
+                        Foreground="#FFF" BorderBrush="#39F" FontSize="14" Click="SendTweet">ツイート</Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

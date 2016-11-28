@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.25920.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapeN", "GrapeN\GrapeN.csproj", "{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapeN Updater", "GrapeN Updater\GrapeN Updater.csproj", "{98BE6805-B0CC-4760-93C7-2E0441623242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapeN Pronama Edition", "GrapeN Pronama Edition\GrapeN Pronama Edition.csproj", "{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapeN Pronama Updater", "GrapeN Pronama Updater\GrapeN Pronama Updater.csproj", "{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C605019E-772F-4408-A257-5C342FACE8BB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Debug|x64.ActiveCfg = Debug|x64
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Debug|x64.Build.0 = Debug|x64
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Release|x64.ActiveCfg = Release|x64
+		{3CA18C24-20CC-4713-A0C0-B234D22E9D9D}.Release|x64.Build.0 = Release|x64
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Debug|x64.Build.0 = Debug|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Release|x64.ActiveCfg = Release|Any CPU
+		{98BE6805-B0CC-4760-93C7-2E0441623242}.Release|x64.Build.0 = Release|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Debug|x64.Build.0 = Debug|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Release|x64.ActiveCfg = Release|Any CPU
+		{6402E06C-5BBD-4A07-AA50-F4E0AD36E251}.Release|x64.Build.0 = Release|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Debug|x64.Build.0 = Debug|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Release|x64.ActiveCfg = Release|Any CPU
+		{BB9260EE-E9AE-45FC-BBEA-13733E9548FA}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
